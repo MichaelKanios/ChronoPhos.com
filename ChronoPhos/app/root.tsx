@@ -10,6 +10,9 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import Navbar from "./components/Navbar";
+import CookieConsent from "react-cookie-consent";
+import CookieBanner from "./components/CookieBanner";
+
 
 
 export const links: Route.LinksFunction = () => [
@@ -36,14 +39,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
          <Navbar/>
+         
         <main>
           {children} 
+           <CookieBanner/>
 
         </main>
-            <ScrollRestoration />
-        <Scripts />
        
-        
+            <ScrollRestoration />
+        <Scripts /> 
        
       </body>
     </html>
