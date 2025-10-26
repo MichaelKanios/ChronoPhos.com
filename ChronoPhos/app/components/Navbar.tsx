@@ -1,56 +1,14 @@
 import { useState } from "react";
-import {
-  FaInstagram,
-  FaFacebook,
-  FaYoutube,
-  FaBandcamp,
-  FaTimes,
-  FaBars,
-  FaSpotify,
-} from "react-icons/fa";
-import { SiApplemusic } from "react-icons/si";
+import { NavLink } from "react-router-dom";
+import { socialIcons, menuItems } from "app/data/navbarData.ts";
+import { FaTimes, FaBars } from "react-icons/fa";
 
-const socialIcons = [
-  { 
-    id: 1,
-    icon: FaYoutube,
-    href: "https://www.youtube.com/@ChronoPhos",
-    color: "xl:w-8 xl:h-8 md:w-6 md:h-6 text-red-700 hover:text-red-500 transition-colors",
-  },
-  {
-    id: 2,
-    icon: FaBandcamp,
-    href: "https://chronophos.bandcamp.com/",
-    color: "xl:w-8 xl:h-8 md:w-6 md:h-6 text-indigo-500 hover:text-indigo-300 transition-colors duration-300",
-  },
-   {
-    id: 3,
-    icon: SiApplemusic,
-    href: "https://music.apple.com/us/artist/chrono-phos/1777943622",
-    color: "xl:w-8 xl:h-8 md:w-6 md:h-6 text-red-600 hover:text-red-400 transition-colors duration-300",
-  },
-   {
-    id: 4,
-    icon: FaSpotify,
-    href: "https://open.spotify.com/artist/07uUaAZtYgObH3SZXW0zqC?si=elszA-E3TV-920yJjtbIJg",
-    color: "xl:w-8 xl:h-8 md:w-6 md:h-6 text-green-500 hover:text-green-300 transition-colors duration-300",
-  },
-   {
-    id: 5,
-    icon: FaFacebook,
-    href: "https://www.facebook.com/people/Chrono-Phos/61567608567776/",
-    color: "xl:w-8 xl:h-8 md:w-6 md:h-6 text-blue-500 hover:text-blue-300 transition-colors duration-300",
-  },
-  {
-    id: 6,
-    icon: FaInstagram,
-    href: "https://www.instagram.com/chronophos_mk",
-    color: "xl:w-8 xl:h-8 md:w-6 md:h-6 text-pink-600 hover:text-pink-400 transition-colors duration-300",
-  },
-];
+const base =
+  "transform transition-transform duration-300 hover:scale-125 hover:text-yellow-400";
+const active = "text-yellow-400 font-semibold";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);  
+  const [menuOpen, setMenuOpen] = useState(false);
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
@@ -64,149 +22,83 @@ const Navbar = () => {
 
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setMenuOpen(!menuOpen)}
-        className="text-white text-2xl md:hidden z-[60]"
+        type="button"
+        onClick={() => setMenuOpen((prev) => !prev)}
+        className="relative z-[60] text-white text-2xl md:hidden"
+        aria-label="Toggle Menu"
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex mx-auto custom-font">
-        <ul className="flex space-x-8 text-xl text-white xl:text-2xl">
-          <li>
-            <a href="#who-am-i" className="hover:underline">
-              Who am I
-            </a>
-          </li>
-          <li>
-            <a href="#news" className="hover:underline">
-              News
-            </a>
-          </li>
-          <li>
-            <a href="#releases" className="hover:underline">
-              Releases
-            </a>
-          </li>
-          <li>
-            <a href="#photos" className="hover:underline">
-              Photos
-            </a>
-          </li>
-          <li>
-            <a href="#videos" className="hover:underline">
-              Videos
-            </a>
-          </li>
-          <li>
-            <a href="#gear" className="hover:underline">
-              Gear
-            </a>
-          </li>
-        </ul>
+        <div className="flex space-x-8 text-xl text-white xl:text-2xl">
+          {menuItems.map((menuitem) => (
+            <NavLink
+              key={menuitem.id}
+              to={menuitem.page}
+              className={({ isActive }) => (isActive ? active : base)}
+            >
+              {menuitem.name}
+            </NavLink>
+          ))}
+        </div>
       </nav>
 
       {/* Desktop Social Icons */}
-<div className="hidden md:flex xl:space-x-4 md:space-x-2">
-  {socialIcons.map(({ id, icon: Icon, href, color }) => (
-    <a
-      key={id}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transform transition-transform duration-300 hover:scale-125"
-    >
-      <Icon className={color} />
-    </a>
-  ))}
-</div>
-  
-   
-    
+      <div className="hidden md:flex xl:space-x-4 md:space-x-2">
+        {socialIcons.map(({ id, icon: Icon, href, color }) => (
+          <a
+            key={id}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform transition-transform duration-300 hover:scale-125"
+          >
+            <Icon className={color} />
+          </a>
+        ))}
+      </div>
 
       {/* Overlay όταν ανοίγει το mobile menu */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
           onClick={() => setMenuOpen(false)}
         />
       )}
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-black transition-transform duration-300 transform z-50 custom-font 
-          ${menuOpen ? "translate-x-0" : "translate-x-[110%]"}`}
+        className={`fixed top-0 right-0 h-full w-64 bg-gray-900 bg-opacity-95 transition-transform duration-300 transform z-50 md:hidden custom-font 
+          ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <ul className="flex flex-col items-center space-y-4 py-8 text-white">
-          <li>
-            <a
-              href="#who-am-i"
+        <div className="flex flex-col items-center space-y-4 py-8 text-white">
+          {menuItems.map((menuitem) => (
+            <NavLink
+              key={menuitem.id}
+              to={menuitem.page}
               onClick={handleLinkClick}
               className="hover:underline text-xl"
             >
-              Who am I
-            </a>
-          </li>
-          <li>
-            <a
-              href="#news"
-              onClick={handleLinkClick}
-              className="hover:underline text-xl"
-            >
-              News
-            </a>
-          </li>
-          <li>
-            <a
-              href="#releases"
-              onClick={handleLinkClick}
-              className="hover:underline text-xl"
-            >
-              Releases
-            </a>
-          </li>
-          <li>
-            <a
-              href="#photos"
-              onClick={handleLinkClick}
-              className="hover:underline text-xl"
-            >
-              Photos
-            </a>
-          </li>
-          <li>
-            <a
-              href="#videos"
-              onClick={handleLinkClick}
-              className="hover:underline text-xl"
-            >
-              Videos
-            </a>
-          </li>
-          <li>
-            <a
-              href="#gear"
-              onClick={handleLinkClick}
-              className="hover:underline text-xl"
-            >
-              Gear
-            </a>
-          </li>
-        </ul>
+              {menuitem.name}
+            </NavLink>
+          ))}
+        </div>
 
         {/* Mobile Social Icons */}
         <div className="flex space-x-4 mt-4 justify-center text-2xl">
           {socialIcons.map(({ id, icon: Icon, href, color }) => (
-    <a
-      key={id}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transform transition-transform duration-300 hover:scale-125"
-    >
-      <Icon className={color} />
-    </a>
-  ))}
+            <a
+              key={id}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform transition-transform duration-300 hover:scale-125"
+            >
+              <Icon className={color} />
+            </a>
+          ))}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import { Link } from "react-router-dom";
 
 export default function CookieBanner() {
   const [isClient, setIsClient] = useState(false);
@@ -63,10 +64,9 @@ export default function CookieBanner() {
     >
       <span className="text-sm">
         We use cookies to analyze website traffic and improve your experience.{" "}
-        <a href="/terms" className="underline hover:text-gray-300">
+        <Link to="./terms" className="underline hover:text-gray-300">
           Terms and Conditions
-        </a>
-        .
+        </Link>
       </span>
     </CookieConsent>
   );
