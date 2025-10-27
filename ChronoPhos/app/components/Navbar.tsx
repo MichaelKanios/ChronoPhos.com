@@ -12,7 +12,7 @@ const Navbar = () => {
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
-    <div className="flex justify-between items-center font-chrono py-4 w-full px-8 fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <div className="flex justify-between items-center font-chrono py-4 w-full px-8 mt-0.5 md:fixed top-0 left-0 right-0 z-50 bg-gray-950 md:bg-gray-950/50 md:backdrop-blur-sm">
       {/* Logo */}
       <img
         src="app/assets/images/file.png"
@@ -24,7 +24,7 @@ const Navbar = () => {
       <button
         type="button"
         onClick={() => setMenuOpen((prev) => !prev)}
-        className="relative z-[60] text-white text-2xl md:hidden"
+        className="relative z-60 text-white text-2xl md:hidden"
         aria-label="Toggle Menu"
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
