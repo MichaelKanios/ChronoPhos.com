@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const videos: string[] = [
-  "/videos/clip1.mp4",
+  "/videos/ChronoPhos.mov",
   "/videos/clip2.mp4",
   "/videos/clip3.mp4",
   "/videos/clip4.mp4",

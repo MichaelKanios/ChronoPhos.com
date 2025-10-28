@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="flex justify-between items-center font-chrono py-4 w-full px-8 mt-0.5 md:fixed top-0 left-0 right-0 z-50 bg-gray-950 md:bg-gray-950/50 md:backdrop-blur-sm">
       {/* Logo */}
       <img
-        src="app/assets/images/file.png"
+        src="/images/file.png"
         alt="Chrono Phos Logo"
         className="xl:w-24 md:w-20 w-20"
       />
