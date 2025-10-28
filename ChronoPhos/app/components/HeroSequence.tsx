@@ -1,31 +1,43 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const videos: string[] = [
-  "/videos/ChronoPhos.mov",
-  "/videos/ChronoPhos.mov",
-  "/videos/ChronoPhos.mov",
-  "/videos/ChronoPhos.mov",
+  "/videos/1.mp4",
+  "/videos/3.mp4",
+  "/videos/2.mp4",
+  "/videos/4.mp4",
 ];
 
 export default function HeroSequence() {
+  const refs = useRef<HTMLVideoElement[]>([]);
+
+  useEffect(() => {
+    // καθυστερεί κάθε autoplay με βάση το index
+    refs.current.forEach((video, i) => {
+      if (!video) return;
+      setTimeout(() => {
+        video.play();
+      }, i * 1000); // 1 δευτερόλεπτο καθυστέρηση ανά βίντεο
+    });
+  }, []);
+
   return (
-    <section className="relative flex items-center justify-center h-screen w-full overflow-hidden bg-black">
-      {/* Background progressive video sequence */}
+    <section className="relative flex items-center justify-center h-[80vh] bg-black overflow-hidden w-full rounded-3xl">
       <div className="absolute inset-0 flex">
         {videos.map((src, i) => (
           <motion.video
             key={i}
-            autoPlay
+            ref={(el) => el && (refs.current[i] = el)}
             muted
-            loop
             playsInline
-            preload="none"
+            preload="auto"
+            loop={false}
             src={src}
-            className="object-cover w-1/4 h-full opacity-0"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            className="object-cover md:object-contain w-full h-full opacity-70"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
-              delay: i * 1.5, // καθυστέρηση για κάθε clip
+              delay: i * 1, // καθυστέρηση για το fade-in
               duration: 1.2,
               ease: "easeOut",
             }}
@@ -33,7 +45,7 @@ export default function HeroSequence() {
         ))}
       </div>
 
-      {/* Overlay content */}
+      {/* Overlay */}
       <div className="relative z-10 text-center text-white px-4">
         <motion.h1
           className="text-5xl md:text-7xl font-bold mb-4"
@@ -68,7 +80,6 @@ export default function HeroSequence() {
         </motion.button>
       </div>
 
-      {/* Optional gradient overlay για καλύτερο contrast */}
       <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-transparent" />
     </section>
   );

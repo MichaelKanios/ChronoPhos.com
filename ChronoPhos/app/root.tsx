@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-2 my-32 ">
+        <main className="w-full px-6 md:px-12 my-12 md:my-32">
           {children}
           <CookieBanner />
         </main>
