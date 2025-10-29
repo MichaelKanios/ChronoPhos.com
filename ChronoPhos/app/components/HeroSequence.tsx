@@ -12,12 +12,12 @@ export default function HeroSequence() {
   const refs = useRef<HTMLVideoElement[]>([]);
 
   useEffect(() => {
-    // καθυστερεί κάθε autoplay με βάση το index
+    
     refs.current.forEach((video, i) => {
       if (!video) return;
       setTimeout(() => {
         video.play();
-      }, i * 1000); // 1 δευτερόλεπτο καθυστέρηση ανά βίντεο
+      }, i * 1000); 
     });
   }, []);
 
@@ -33,11 +33,11 @@ export default function HeroSequence() {
             preload="auto"
             loop={false}
             src={src}
-            className="object-cover md:object-contain w-full h-full opacity-70"
+            className="object-cover md:object-contain w-full h-full "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: i * 1, // καθυστέρηση για το fade-in
+              delay: i * 1, 
               duration: 1.2,
               ease: "easeOut",
             }}
@@ -48,7 +48,7 @@ export default function HeroSequence() {
       {/* Overlay */}
       <div className="relative z-10 text-center text-white px-4">
         <motion.h1
-          className="text-5xl md:text-7xl font-bold mb-4"
+          className="text-5xl md:text-7xl font-bold mb-4 font-chrono"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: videos.length * 1.2 }}
@@ -62,7 +62,7 @@ export default function HeroSequence() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: videos.length * 1.3 }}
         >
-          Escape to the Horizon • Out Soon
+          Escape to the Horizon • New Album 
         </motion.p>
 
         <motion.button
