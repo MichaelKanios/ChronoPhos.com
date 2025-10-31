@@ -19,11 +19,11 @@ const Albums = () => {
             className="inter-var"
             containerClassName="py-8"
           >
-            <CardBody className="bg-black relative group/card hover:shadow-2xl border-gray-400 w-auto sm:w-[24rem] h-auto rounded-xl p-4 border">
+            <CardBody className="bg-black relative group/card hover:shadow-2xl border-gray-400 w-auto sm:w-2xl h-auto rounded-xl p-4 border">
               {/* Album Title */}
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-white"
+                className="text-2xl md:text-4xl font-bold text-white"
               >
                 {album.title}
               </CardItem>
@@ -32,7 +32,7 @@ const Albums = () => {
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-sm max-w-sm mt-2 text-neutral-300"
+                className="text-xl max-w-sm mt-2 text-neutral-300"
               >
                 Release {album.releaseYear}
               </CardItem>
