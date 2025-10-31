@@ -10,7 +10,6 @@ export default function Who() {
         restDelta: 0.001,
     })
 
-
     return (
         <>
             <motion.div
@@ -54,9 +53,7 @@ function Content() {
         "For my debut album, I decided to make most tracks instrumental, as I felt too angry to write lyrics without resorting to cursing every other line! I'm already preparing my second album, which, after much thought, may include some songs with lyrics. I haven’t felt the need to express myself through lyrics yet, but if that need arises in the future, I won’t rule out the possibility of doing so.",
         "Anyway, enjoy and support my efforts in every way possible so I can keep writing."
       ]}
-    /> 
-          
-           
+    />            
            
           
    

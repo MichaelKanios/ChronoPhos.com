@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { socialIcons, menuItems } from "app/data/navbarData.ts";
+import { NavLink, Link } from "react-router-dom";
+import { socialIcons, menuItems } from "app/data/navbarData";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const base =
@@ -12,14 +12,15 @@ const Navbar = () => {
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
-    <div className="flex justify-between items-center font-chrono py-4 w-full px-8 mt-0.5 md:fixed top-0 left-0 right-0 z-50 bg-gray-950 md:bg-gray-950/50 md:backdrop-blur-sm">
+    <div className="flex justify-between items-center font-chrono py-4 w-full px-8 mt-0.5  top-0 left-0 right-0 z-50 bg-gray-950 md:bg-gray-950/50 md:backdrop-blur-sm">
       {/* Logo */}
-      <img
-        src="/images/file.png"
-        alt="Chrono Phos Logo"
-        className="xl:w-24 md:w-20 w-20"
-      />
-
+      <Link to="/">
+        <img
+          src="/images/file.png"
+          alt="Chrono Phos Logo"
+          className="xl:w-24 md:w-20 w-20"
+        />
+      </Link>
       {/* Mobile Menu Button */}
       <button
         type="button"
@@ -79,7 +80,7 @@ const Navbar = () => {
               key={menuitem.id}
               to={menuitem.page}
               onClick={handleLinkClick}
-              className="hover:underline text-xl"
+              className="hover:text-yellow-400 duration-300 hover:scale-125 text-xl"
             >
               {menuitem.name}
             </NavLink>
