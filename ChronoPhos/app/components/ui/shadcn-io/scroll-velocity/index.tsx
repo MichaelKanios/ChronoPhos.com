@@ -1,3 +1,4 @@
+'use client';
 
 import React, { useRef, useLayoutEffect, useState } from 'react';
 import {
@@ -136,7 +137,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     const spans = [];
     for (let i = 0; i < numCopies!; i++) {
       spans.push(
-        <span className={`shrink-0 ${className}`} key={i} ref={i === 0 ? copyRef : null}>
+        <span className={`flex-shrink-0 ${className}`} key={i} ref={i === 0 ? copyRef : null}>
           {children}
         </span>
       );

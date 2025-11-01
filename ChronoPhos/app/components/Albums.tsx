@@ -12,14 +12,14 @@ const Albums = () => {
         Albums
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-20 py-8">
+      <div className="flex flex-wrap justify-center gap-10 xl:gap-40 py-2">
         {albumsData.map((album) => (
           <CardContainer
             key={album.id}
             className="inter-var"
             containerClassName="py-8"
           >
-            <CardBody className="bg-black relative group/card hover:shadow-2xl border-gray-400 w-auto sm:w-2xl h-auto rounded-xl p-4 border">
+            <CardBody className="bg-black relative group/card hover:shadow-2xl border-gray-400 max-w-md sm:w-xl h-auto rounded-xl p-4 border">
               {/* Album Title */}
               <CardItem
                 translateZ="50"
@@ -49,7 +49,7 @@ const Albums = () => {
               </CardItem>
 
               {/* Buttons */}
-              <div className="flex justify-between items-center mt-16">
+              <div className="flex justify-between items-center mt-8">
                 <CardItem
                   translateZ={20}
                   as="a"
