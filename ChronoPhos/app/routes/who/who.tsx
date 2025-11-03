@@ -10,14 +10,17 @@ export default function Who() {
   });
 
   return (
-    <>
-      <Link
+     <div className="relative bg-contain bg-center  bg-repeat md:bg-no-repeat bg-[url('/images/Profile2.jpeg')] ">
+    <div className="absolute inset-0 bg-gray-950/70 rounded-2xl"></div>
+      <div className="relative z-10">
+              <Link
         className=" text-white  text-xl tracking-wide rounded hover:underline font-chrono"
         to="/"
       >
         Back to home
       </Link>
       <motion.div
+      
         id="scroll-indicator"
         style={{
           scaleX,
@@ -31,14 +34,17 @@ export default function Who() {
         }}
       />
       <Content />
-    </>
+
+      </div>
+
+    </div>
   );
 }
 
 function Content() {
   return (
     <>
-      <article className="w-full md:w-2/3 lg:w-1/2 mx-auto text-center px-4">
+      <article className="w-full md:w-2/3 lg:w-1/2 mx-auto text-center px-4 ">
         <h2 className="text-3xl font-bold mb-4 text-center">Who am i</h2>
         <SplittingText
           className="mb-6 text-xl leading-8 space-y-6"

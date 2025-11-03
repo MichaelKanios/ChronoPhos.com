@@ -4,6 +4,7 @@ import {
   CardContainer,
   CardItem,
 } from "../components/ui/shadcn-io/3d-card";
+import { Link } from "react-router";
 
 const Albums = () => {
   return (
@@ -38,7 +39,9 @@ const Albums = () => {
               </CardItem>
 
               {/* Cover Image */}
-              <CardItem translateZ="100" className="w-full mt-4">
+              
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <Link to="/albums" className="pointer-events-auto block">
                 <img
                   src={album.coverImage}
                   height="1000"
@@ -46,7 +49,10 @@ const Albums = () => {
                   className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt={album.title}
                 />
+                </Link>
               </CardItem>
+           
+            
 
               {/* Buttons */}
               <div className="flex justify-between items-center mt-8">
