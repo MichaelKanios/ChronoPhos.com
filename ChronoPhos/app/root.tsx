@@ -12,6 +12,7 @@ import "./app.css";
 import Navbar from "./components/Navbar";
 import CookieConsent from "react-cookie-consent";
 import CookieBanner from "./components/CookieBanner";
+import Footer from "./components/Footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -38,10 +39,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <Navbar />
 
-        <main className="w-full px-6 md:px-12 my-12 md:my-32">
+        <main className="w-full m-auto">
           {children}
           <CookieBanner />
         </main>
+        <Footer/>
 
         <ScrollRestoration />
         <Scripts />

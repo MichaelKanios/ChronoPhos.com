@@ -14,7 +14,7 @@ export default function Who() {
     <div className="absolute inset-0 bg-gray-950/70 rounded-2xl"></div>
       <div className="relative z-10">
               <Link
-        className=" text-white  text-xl tracking-wide rounded hover:underline font-chrono"
+        className=" text-white  text-xl tracking-wide rounded hover:underline font-chrono ml-5"
         to="/"
       >
         Back to home
