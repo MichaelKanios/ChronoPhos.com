@@ -33,7 +33,7 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex mx-auto custom-font">
-        <div className="flex space-x-8 text-xl text-white xl:text-3xl wrap-no">
+        <div className="flex space-x-6 xl:space-x-8 text-xl text-white xl:text-3xl wrap-no">
           {menuItems.map((menuitem) => (
             <NavLink
               key={menuitem.id}
