@@ -23,14 +23,14 @@ export const socialIcons: SocialIcon[] = [
     icon: FaYoutube,
     href: "https://www.youtube.com/@ChronoPhos",
     color:
-      "xl:w-8 xl:h-8 md:w-6 md:h-6 text-red-700 hover:text-red-500 transition-colors",
+      "xl:w-8 xl:h-8 md:w-6 md:h-6  text-red-700 hover:text-red-500 transition-colors",
   },
   {
     id: 2,
     icon: FaBandcamp,
     href: "https://chronophos.bandcamp.com/",
     color:
-      "xl:w-8 xl:h-8 md:w-6 md:h-6 text-indigo-500 hover:text-indigo-300 transition-colors duration-300",
+      "xl:w-8 xl:h-8 md:w-6 md:h-6  text-indigo-500 hover:text-indigo-300 transition-colors duration-300",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ export const socialIcons: SocialIcon[] = [
     icon: FaSpotify,
     href: "https://open.spotify.com/artist/07uUaAZtYgObH3SZXW0zqC?si=elszA-E3TV-920yJjtbIJg",
     color:
-      "xl:w-8 xl:h-8 md:w-6 md:h-6 text-green-500 hover:text-green-300 transition-colors duration-300",
+      "xl:w-8 xl:h-8 md:w-6 md:h-6  text-green-500 hover:text-green-300 transition-colors duration-300",
   },
   {
     id: 5,

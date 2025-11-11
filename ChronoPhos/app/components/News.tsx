@@ -1,7 +1,7 @@
 import { SplittingText } from "../components/ui/shadcn-io/splitting-text";
 const News = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <h1 className="text-4xl md:text-6xl font-chrono text-center mt-8">
         News
       </h1>
@@ -64,7 +64,7 @@ const News = () => {
               inspiration to keep writing and creating.
             </p>
           </div>
-          <div className="flex w-1/3 gap-3 ">
+          <div className="flex w-1/3 gap-3 pr-2">
             <img
               className="border-2 p-2 mt-8 rounded-lg border-gray-600"
               src="../../images/wolf1.png"

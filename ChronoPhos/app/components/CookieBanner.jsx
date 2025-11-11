@@ -7,7 +7,7 @@ export default function CookieBanner() {
   const GA_ID = "G-F6BW9RQR6M"; // βάλε το δικό σου
 
   useEffect(() => {
-    // Βεβαιώσου ότι τρέχει μόνο στον browser
+    
     setIsClient(true);
 
     const consent = Cookies.get("CookieConsent");
@@ -32,7 +32,7 @@ export default function CookieBanner() {
     gtag("config", GA_ID);
   }
 
-  if (!isClient) return null; // για SSR συμβατότητα
+  if (!isClient) return null;
 
   return (
     <CookieConsent

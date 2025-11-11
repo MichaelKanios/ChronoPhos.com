@@ -9,7 +9,7 @@ import { Link } from "react-router";
 const Albums = () => {
   return (
     <div>
-      <h2 className="text-4xl md:text-6xl font-chrono text-center mt-20">
+      <h2 className="text-4xl md:text-6xl font-chrono text-center mt-20 overflow-hidden">
         Albums
       </h2>
 
@@ -20,7 +20,7 @@ const Albums = () => {
             className="inter-var"
             containerClassName="py-8"
           >
-            <CardBody className="bg-black relative group/card hover:shadow-2xl border-gray-400 max-w-md sm:w-xl h-auto rounded-xl p-4 border">
+            <CardBody className="bg-black relative group/card hover:shadow-2xl border-gray-400 max-w-md sm:w-xl h-auto rounded-xl p-4 border  ">
               {/* Album Title */}
               <CardItem
                 translateZ="50"
@@ -61,6 +61,7 @@ const Albums = () => {
                   as="a"
                   href={album.youtubeLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:scale-105 px-4 py-2 rounded-xl text-m font-normal bg-red-800 hover:text-white hover:bg-red-500"
                 >
                   YouTube
@@ -73,7 +74,8 @@ const Albums = () => {
                   as="a"
                   href={album.bandcampLink}
                   target="_blank"
-                  className="hover:scale-105 px-4 py-2 rounded-xl text-m font-normal bg-blue-800 hover:text-white hover:bg-blue-500"
+                  rel="noopener noreferrer"
+                  className=" hover:scale-105 px-4 py-2 rounded-xl text-m font-normal bg-blue-800 hover:text-white hover:bg-blue-500"
                 >
                   Bandcamp
                 </CardItem>
