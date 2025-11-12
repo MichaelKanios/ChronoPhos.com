@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CookieBanner() {
   const [isClient, setIsClient] = useState(false);
-  const GA_ID = "G-F6BW9RQR6M"; // βάλε το δικό σου
-
+  const GA_ID = "G-F6BW9RQR6M";
   useEffect(() => {
     
     setIsClient(true);

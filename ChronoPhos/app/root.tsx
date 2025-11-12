@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import CookieConsent from "react-cookie-consent";
 import CookieBanner from "./components/CookieBanner";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop"
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,8 +43,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <main className="w-full m-auto">
           {children}
           <CookieBanner />
+           <BackToTop/>
         </main>
         <Footer/>
+       
 
         <ScrollRestoration />
         <Scripts />

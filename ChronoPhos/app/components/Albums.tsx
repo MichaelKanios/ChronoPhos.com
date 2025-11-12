@@ -9,11 +9,11 @@ import { Link } from "react-router";
 const Albums = () => {
   return (
     <div>
-      <h2 className="text-4xl md:text-6xl font-chrono text-center mt-20 overflow-hidden">
+      <h2 className="text-4xl md:text-6xl font-chrono text-center mt-20 ">
         Albums
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-10 xl:gap-40 py-2">
+      <div className="flex flex-wrap justify-center gap-10 xl:gap-40 py-2 overflow-hidden">
         {albumsData.map((album) => (
           <CardContainer
             key={album.id}

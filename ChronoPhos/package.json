@@ -9,6 +9,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.9.0",
     "@radix-ui/react-aspect-ratio": "^1.1.7",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
