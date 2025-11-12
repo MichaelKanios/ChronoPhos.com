@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 const AlbumsPage = () => {
   return (
     <div className="w-full overflow-hidden">
+
+      
       {/* Section 1 */}
       <div className="relative min-h-screen bg-[url(/images/1.jpg)] bg-cover bg-top rounded-2xl">
         <div className="absolute inset-0 bg-gray-800/20 rounded-2xl"></div>
@@ -41,7 +43,7 @@ const AlbumsPage = () => {
       </div>
 
       {/* Section 2 */}
-     <div className="relative min-h-screen bg-[url(/images/11.jpg)] bg-cover bg-top rounded-2xl ">
+     <div className="relative min-h-screen bg-[url(/images/11.jpg)] bg-cover bg-top rounded-2xl  ">
         <div className="absolute inset-0 bg-gray-800/20 outline-none"></div>
 
         <div className="absolute inset-20 md:inset-40 text-white">

@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+
 import { socialIcons, menuItems } from "app/data/navbarData";
 
 const Footer =()=>{
@@ -33,7 +33,8 @@ const Footer =()=>{
   </a>
 </div>
    
-    <div className="text-sm font-semibold m-2">&copy;2025 Chrono Phos. All rights reserved.</div>
+    <div className="text-sm font-semibold m-2">&copy;2025 <a href="https://my-portfolio-project-react-tailwind.vercel.app/"  target="_blank"
+            rel="noopener noreferrer" className="italic text-yellow-400 hover:underline " >Chrono Phos.</a> All rights reserved.</div>
    
   </nav>
 
