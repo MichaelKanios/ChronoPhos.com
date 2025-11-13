@@ -1,3 +1,4 @@
+// Data για Home Page Albums Section
 export const albumsData = [
   {
     id: 1,
