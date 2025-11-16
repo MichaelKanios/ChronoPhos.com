@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SplittingText } from "../../components/ui/shadcn-io/splitting-text";
 import { Link } from "react-router-dom";
-import NoTime from "../../components/Albums/NoTime";
+import Escape from "../../components/Albums/Escape";
 
 const AlbumsPage = () => {
   return (
@@ -87,7 +87,6 @@ const AlbumsPage = () => {
               riffs and solos instead.
             </p>
           </motion.div>
-          <NoTime />
         </div>
       </div>
 
@@ -136,6 +135,7 @@ const AlbumsPage = () => {
               journey and help you connect with it completely.
             </p>
           </motion.div>
+          <Escape />
         </div>
       </div>
       <div className="relative min-h-screen bg-[url(/images/4.jpg)] bg-cover bg-top rounded-2xl">
