@@ -62,7 +62,7 @@ export default function HeroSequence() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: videos.length * 1.3 }}
         >
-          Listen Now
+          🎵Listen Now
         </motion.p>
 
         <motion.div
