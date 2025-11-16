@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const videos: string[] = [
   "/videos/1.mp4",
@@ -12,12 +13,11 @@ export default function HeroSequence() {
   const refs = useRef<HTMLVideoElement[]>([]);
 
   useEffect(() => {
-    
     refs.current.forEach((video, i) => {
       if (!video) return;
       setTimeout(() => {
         video.play();
-      }, i * 1000); 
+      }, i * 1000);
     });
   }, []);
 
@@ -37,7 +37,7 @@ export default function HeroSequence() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: i * 1, 
+              delay: i * 1,
               duration: 1.2,
               ease: "easeOut",
             }}
@@ -62,22 +62,22 @@ export default function HeroSequence() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: videos.length * 1.3 }}
         >
-          Escape to the Horizon • New Album 
+          Listen Now
         </motion.p>
 
-        <motion.button
-          onClick={() =>
-            document
-              .getElementById("about")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: videos.length * 1.4 }}
         >
-          Explore
-        </motion.button>
+          <Link
+            to="/albums"
+            className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold 
+               hover:bg-yellow-200 transition inline-block hover:scale-125"
+          >
+            Explore
+          </Link>
+        </motion.div>
       </div>
 
       <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-transparent" />
