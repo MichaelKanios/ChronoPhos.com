@@ -14,35 +14,37 @@ const EscapeTracks = [
     title: "First Light",
     youtube: "https://www.youtube.com/embed/rxPozpmG1bU?si=7dMtkeAnzQCXRAZB",
     description:
-      "A dark opening track with atmospheric guitars and evolving tension.",
+      "The opening track of Escape to the Horizon — a bright, hopeful introduction with layered guitars and sunrise energy.",
   },
   {
     title: "Endless Road",
     youtube: "https://www.youtube.com/embed/6IoMFFi-71g?si=pEaL-7cP_FV83ADs",
     description:
-      "Faster riffs and driving rhythm, representing the chaos of modern life.",
+      "An atmospheric journey toward a cinematic sunset, featuring a sudden burst of rain captured in a sharp, nervous solo.",
   },
   {
     title: "Wide Skies",
     youtube: "https://www.youtube.com/embed/ZsOui1o19G0?si=dWoeJcQ1ds1TJtby",
     description:
-      "A melodic progression that feels like breathing after long pressure.",
+      "Mixed emotions under vast skies — hopeful yet melancholic melodies reflecting the tension and the cost of the journey.",
   },
   {
     title: "Far Away",
     youtube: "https://www.youtube.com/embed/m6MHMySOf40?si=RfDoqwZSf7ZdRCaz",
-    description: "A drifting instrumental representing mental escape.",
+    description:
+      "The road opens wide — raw emotions and forgotten souls everywhere, driven by strength and determination to continue.",
   },
   {
     title: "Crimson Line",
     youtube: "https://www.youtube.com/embed/8iW0BxAuefM?si=USJJulpaPZpHAiKG",
-    description: "A heavier middle section with strong emotional push.",
+    description:
+      "Close to the sunset now — melodies calm into optimism and joy, yet a lingering mystery holds the mind back.",
   },
   {
     title: "The Horizon",
     youtube: "https://www.youtube.com/embed/9VPIiWEcmjU?si=9Arjy0HX6jhW7zcU",
     description:
-      "Final track — emotional build-up ending in open space and release.",
+      "The final steps before redemption — rising flame, unstoppable strength, and an explosive solo leading to a soft, peaceful ending.",
   },
 ];
 
@@ -58,7 +60,7 @@ export default function Escape() {
       <DialogContent className="max-h-[90vh] overflow-y-auto bg-gray-900 text-white p-6">
         <DialogHeader className="mb-6">
           <DialogTitle className="text-3xl font-bold text-yellow-400">
-            No Time — Tracklist
+            Escape To The Horizon — Tracklist
           </DialogTitle>
           <DialogDescription className="text-gray-300">
             Explore the full tracklist from Escape to the Horizon.

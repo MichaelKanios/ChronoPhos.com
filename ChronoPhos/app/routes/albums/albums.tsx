@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SplittingText } from "../../components/ui/shadcn-io/splitting-text";
 import { Link } from "react-router-dom";
 import Escape from "../../components/Albums/Escape";
+import NoTime from "~/components/Albums/NoTime";
 
 const AlbumsPage = () => {
   return (
@@ -87,6 +88,7 @@ const AlbumsPage = () => {
               riffs and solos instead.
             </p>
           </motion.div>
+          <NoTime />
         </div>
       </div>
 
