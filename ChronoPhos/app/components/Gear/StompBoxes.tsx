@@ -43,6 +43,27 @@ const StompBoxes = () => {
           </div>
         ))}
       </div>
+      <div
+        className="max-w-[720px] w-full mx-auto mt-12 group transition duration-300
+    rounded-2xl border border-white/10
+    shadow-[0_0_20px_rgba(255,255,255,0.06)]
+    hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]
+    overflow-hidden"
+      >
+        <div className="bg-[url(/images/Gear/Orange.PNG)] bg-cover bg-center w-full h-96 "></div>
+
+        <div className="bg-white/5 backdrop-blur-sm p-4 flex flex-col items-center">
+          <p className="text-m text-yellow-400 font-medium mt-3 text-center">
+            Orange Head Micro Terror
+          </p>
+
+          <h3 className="text-base text-white font-light mt-2 text-center">
+            My main amp setup — warm mids, tight low end, and the signature
+            Orange grit that shapes my core tone.I use it with Seventy 80
+            Celestion speaker.
+          </h3>
+        </div>
+      </div>
     </div>
   );
 };
