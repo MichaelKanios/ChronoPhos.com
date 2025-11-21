@@ -1,7 +1,7 @@
-import StompBoxes from "~/components/StompBoxes";
+import StompBoxes from "~/components/Gear/StompBoxes";
 
 import { Link } from "react-router-dom";
-import Guitars from "~/components/Guitars";
+import Guitars from "~/components/Gear/Guitars";
 const Gear = () => {
   return (
     <div className="text-center bg-[url(/images/6.jpg)] bg-cover">
