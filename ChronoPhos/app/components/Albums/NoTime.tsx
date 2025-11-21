@@ -8,6 +8,7 @@ import {
 } from "../ui/shadcn-io/dialog";
 
 import { Button } from "../ui/shadcn-io/button";
+import { SplittingText } from "../../components/ui/shadcn-io/splitting-text";
 
 const NoTimeTracks = [
   {
@@ -64,8 +65,14 @@ export default function NoTime() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-yellow-500 text-black font-bold hover:bg-yellow-600 transition">
-          Listen Now
+        <Button className="bg-yellow-500 text-black font-bold hover:bg-yellow-600 transition ">
+          <SplittingText
+            className="italic semibold text-black tracking-[5px]"
+            text="Listen Now"
+            inView={true}
+            inViewOnce={true}
+            inViewMargin="-50px"
+          />
         </Button>
       </DialogTrigger>
 
