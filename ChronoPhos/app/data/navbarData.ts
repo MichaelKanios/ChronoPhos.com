@@ -72,7 +72,7 @@ export const menuItems: MenuItem[] = [
   { id: 1, name: "Home", page: "./" },
   { id: 2, name: "Albums", page: "./albums" },
   { id: 3, name: "Gear", page: "./gear" },
-  { id: 4, name: "Photos", page: "./photos" },
+  { id: 4, name: "Gallery", page: "./photos" },
   { id: 5, name: "Lessons", page: "./lessons" },
   { id: 6, name: "Who am I", page: "./who" },
 ];

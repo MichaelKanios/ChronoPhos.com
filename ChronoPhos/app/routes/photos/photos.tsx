@@ -1,5 +1,4 @@
 import Gallery from "~/components/Gallery";
-import ComingSoon from "../../components/ComingSoon";
 
 import { Link } from "react-router-dom";
 

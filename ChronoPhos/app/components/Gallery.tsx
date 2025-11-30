@@ -15,10 +15,20 @@ const itemVariants = {
 };
 
 const columns = [
-  ["/images/Escape1.webp", "/images/Escape2.webp", "/images/Escape3.webp"],
-  ["/images/10.jpg", "/images/Gallery (1).png"],
-  ["/images/7.jpg", "/images/Gallery (2).png", "/images/8.jpg"],
-  ["/images/Gallery (3).png", "/images/Gallery (4).png"],
+  [
+    "/images/Escape1.webp",
+    "/images/8.jpg",
+    "/images/Escape2.webp",
+    "/images/Escape3.webp",
+    
+  ],
+  ["/images/10.jpg", "/images/Gallery (1).png", "/images/Michael (1).jpg"],
+  ["/images/Michael (2).jpg", "/images/7.jpg", "/images/Gallery (2).png"],
+  [
+    "/images/Gallery (3).png",
+    "/images/Michael (2).png",
+    "/images/Gallery (4).png",
+  ],
 ];
 
 export default function Gallery() {
