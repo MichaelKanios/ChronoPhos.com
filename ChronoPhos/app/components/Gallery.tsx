@@ -35,12 +35,12 @@ export default function Gallery() {
   return (
     <div className="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <h1 className="text-3xl font-semibold text-center mx-auto">
-        Explore the Library
+        Explore the Chrono-Library
       </h1>
 
-      <p className="text-sm text-slate-500 text-center mb-6 max-w-lg mx-auto">
-        A visual collection of our most recent works - each piece crafted with
-        intention, emotion, and style.
+      <p className="text-m text-slate-500 text-center mb-6 max-w-lg mx-auto">
+        Where sound becomes image. A collection of visual stories echoing the
+        energy and spirit of Chrono-Phos.
       </p>
 
       <motion.div
