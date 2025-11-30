@@ -6,7 +6,6 @@ export default [
   route("albums", "./routes/albums/albums.tsx"),
   route("photos", "./routes/photos/photos.tsx"),
   route("terms", "./routes/terms/terms.tsx"),
-  route("videos", "./routes/videos/videos.tsx"),
   route("who", "./routes/who/who.tsx"),
   route("lessons", "./routes/lessons/lessons.tsx"),
   route("*", "./routes/error/notfound.tsx"),
