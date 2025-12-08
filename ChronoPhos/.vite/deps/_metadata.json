@@ -1,0 +1,73 @@
+{
+  "hash": "cf1a233e",
+  "configHash": "358a51ce",
+  "lockfileHash": "72d7dc9a",
+  "browserHash": "688fd49e",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "cbd92ee5",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "9816c1df",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "db3d0999",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "0f624b01",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4910bebc",
+      "needsInterop": true
+    },
+    "react-router": {
+      "src": "../../node_modules/react-router/dist/development/index.mjs",
+      "file": "react-router.js",
+      "fileHash": "73b12ccf",
+      "needsInterop": false
+    },
+    "react-router/dom": {
+      "src": "../../node_modules/react-router/dist/development/dom-export.mjs",
+      "file": "react-router_dom.js",
+      "fileHash": "5f2fcc3b",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "42738abf",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-M3F6W4AK": {
+      "file": "chunk-M3F6W4AK.js"
+    },
+    "chunk-O74PVBQQ": {
+      "file": "chunk-O74PVBQQ.js"
+    },
+    "chunk-AFA2DEQY": {
+      "file": "chunk-AFA2DEQY.js"
+    },
+    "chunk-VD3CUSI6": {
+      "file": "chunk-VD3CUSI6.js"
+    },
+    "chunk-C7CLCYJX": {
+      "file": "chunk-C7CLCYJX.js"
+    }
+  }
+}

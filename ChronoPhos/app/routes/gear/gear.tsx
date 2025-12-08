@@ -1,9 +1,15 @@
-import ComingSoon from "../../components/ComingSoon";
+import StompBoxes from "~/components/Gear/StompBoxes";
+
 import { Link } from "react-router-dom";
+import Guitars from "~/components/Gear/Guitars";
 const Gear = () => {
   return (
-    <div className="text-center">
-      <ComingSoon />
+    <div className="text-center bg-[url(/images/6.jpg)] bg-cover">
+      <Guitars/>
+      <StompBoxes/>
+
+
+      
       <Link
         className="font-chrono text-white text-center text-xl md:text-2xl 
     tracking-wide rounded  hover:bg-yellow-600  px-4 py-2 
